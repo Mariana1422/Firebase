@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="card-header">
+        <h3>TASKS</h3>
+        <div class="card-body">
+          <input #newNote class="form-control ml-2 p-2">
+          <button (click)="addNotes(newNote.value)" class="btn btn-success">Agregar Nota</button>
+          <h4 *ngFor="let note of notes">         
+          --> {{ note.description }} &nbsp;&nbsp; <button (click)="deleteNotes(note.id)" class="btn btn-danger">Eliminar Nota</button>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
